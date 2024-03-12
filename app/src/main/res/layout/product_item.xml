@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/card_view_layout_margin"
+    app:cardCornerRadius="@dimen/card_view_card_corner_radius"
+    app:cardElevation="@dimen/card_view_card_elevation">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView_product_image"
+            android:layout_width="@dimen/card_view_product_image_layout"
+            android:layout_height="@dimen/card_view_product_image_layout"
+            android:layout_margin="@dimen/card_view_product_image_margin"
+            app:cardCornerRadius="@dimen/card_view_product_card_corner_radius"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imageView_product_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:srcCompat="@drawable/ic_launcher_background" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/textView_product_title"
+            android:layout_width="@dimen/text_view_product_layout_width"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_view_product_layout_margin"
+            android:lines="1"
+            android:textSize="@dimen/text_size_title_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cardView_product_image"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/text_view_preview_title_text"/>
+
+        <TextView
+            android:id="@+id/textView_product_description"
+            android:layout_width="@dimen/text_view_product_layout_width"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_view_product_layout_margin"
+            android:lines="2"
+            android:textSize="@dimen/text_size_main_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cardView_product_image"
+            app:layout_constraintTop_toBottomOf="@+id/textView_product_title"
+            tools:text="@string/text_view_preview_description_text"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Товары</string>
+    <string name="text_view_preview_title_text">Название продукта</string>
+    <string name="text_view_preview_description_text">Описание продукта</string>
+</resources>
